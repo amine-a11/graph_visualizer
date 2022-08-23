@@ -4,6 +4,7 @@ let drag = false;
 let node_index = 0;
 let edges = [];
 let sz = 40;
+const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let textA = document.querySelector("textarea");
 function setup() {
     createCanvas(400, 400);
@@ -88,13 +89,14 @@ function draw() {
     })
 }
 textA.addEventListener("keyup", (event) => {
-    if (keyCode === 8 && !textA.value) {
+    console.log(event.key);
+    if (event.key === "Backspace" && !textA.value) {
+        console.log("hi");
         nodes = [];
         vals = {};
         edges = [];
-
     }
-    if (event.keyCode < 48 || event.keyCode > 90) {
+    if (!arr.includes(event.key)) {
         return;
     }
     let text = textA.value.split('\n').filter((elem) => {
