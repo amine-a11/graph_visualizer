@@ -1,10 +1,12 @@
-html{
-    background-color: black;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+main{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-main{
     width:100%;
     white-space: nowrap;
 }
@@ -15,6 +17,41 @@ textarea{
     height:395px;
     width:150px;
     resize: none;
-    background-color: rgba(200,200,200,0.5);
+    background-color: rgba(41, 50, 65,0.5);
+    border-radius: 10px;
     font-size: 15px;
+}
+textarea:focus{
+    outline: none !important;
+}
+.container{
+    width:100%;
+    height:70px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+}
+#snode{
+    width:30px;
+    font-size: 15px;
+}
+
+label{
+    font-size:20px;
+    font-weight: bold;
+    color:#0c499a;
+}
+.btn-vis{
+    font-size:20px;
+    font-weight: bold;
+    padding:10px;
+    color:#0c499a;
+}
+.btn-vis:hover{
+    color:white;
+    background-color: #0c499a;
+    cursor: pointer;
+    border-radius: 10px;
 }

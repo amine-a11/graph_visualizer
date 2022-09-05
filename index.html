@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>graph visualizer</title>
 </head>
 <body>
+    <div class="container">
+        <div class="con">
+            <label for="algo">Algorithme: </label>
+            <select name="algo" id="algo">
+                <option value="dfs">DFS</option>
+                <option value="bfs">BFS</option>
+            </select>
+        </div>
+        <div class="con">
+            <label for="snode">Start-node: </label>
+            <input type="text" name="snode" id="snode">
+        </div>
+        <div class="con">
+            <span class="btn-vis">Visualize algorithm</span>
+        </div>
+    </div>
     <textarea></textarea>
+    <!-- <button id="btn">click</button>
+    <button id="btn1">animate line</button> -->
 </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
 <script src="./node.js"></script>
 <script src="./edge.js"></script>
 <script src="./script.js"></script>
-</html>
